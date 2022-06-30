@@ -1,0 +1,49 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "chrome",
+			"request": "launch",
+			"name": "Launch Chrome against localhost",
+			"url": "http://localhost:4200",
+			"webRoot": "${workspaceFolder}",
+			"userDataDir": false,
+			"runtimeArgs": [
+				"--profile-directory=debug-profile",
+				"--remote-debugging-port=9222"
+			]
+		},
+		{
+			"type": "chrome",
+			"request": "attach",
+			"name": "Attach to Chrome",
+			"port": 9222,
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "rhenag-web",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": [
+				"run",
+				"start"
+			]
+		},
+		{
+			"type": "firefox",
+			"request": "launch",
+			"reAttach": true,
+			"name": "Launch Firefox against localhost",
+			"url": "http://localhost:4200",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"type": "firefox",
+			"request": "attach",
+			"name": "Attach to Firefox",
+			"url": "http://localhost:4200",
+			"webRoot": "${workspaceFolder}"
+		},
+	]
+}
